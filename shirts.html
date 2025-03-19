@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawings</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap'); /* Example metal font */
+        
+        @font-face {
+            font-family: 'Pixel Digivolve';
+            src: url("C:\Users\voebi\OneDrive\Documents\fonts\Pixel Digivolve.otf") format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+    body {
+        background-color: #000;
+        color: #fff;
+        font-family: 'Pixel Digivolve';
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 1200px;
+        width: 100%;
+        background-color: #000;
+        padding: 20px;
+    }    
+
+    .nav-link {
+        color: white;
+        text-decoration: none;
+    }
+
+
+    .nav-link.active {
+        /*text-decoration: underline;*/
+        color: #000000; /* Optional: Highlight it with a unique color */
+    }
+
+        
+        .navbar {
+            width: 100%;
+            background: linear-gradient(to top, #600080, #9900cc);
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            border: 0.5px solid #7b7b7b;
+        }
+
+        .navbar a {
+            color: rgb(255, 255, 255);
+            font-size: 25px;
+            text-decoration: none;
+            /*font-weight: bold;*/
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        
+        .checkered-border {
+            width: 75px;
+            background-image: url('https://t3.ftcdn.net/jpg/00/97/81/02/360_F_97810286_SYAktfuCvCY7uFYxqFI0BVIVflKzqNT9.jpg'); /* Use checkerboard image */
+            background-repeat: repeat;
+            top: 0;
+            bottom: 0; /* Ensure it covers the full height */
+            background-size: 300px 300px; /* Adjust the pattern size */
+        }
+
+        /* Left side checkered border */
+        .checkered-border.left {
+            left: 0; /* Position it on the left side */
+        }
+
+        /* Right side checkered border */
+        .checkered-border.right {
+            right: 0; /* Position it on the right side */
+        }
+
+
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: calc(100% - 100px); /* Make content wider by removing side border width */
+            width: 100%;
+            background-color: #000;
+            padding: 20px;
+        }
+
+        .banner {
+            width: 100%;
+            font-family: 'Metal Mania';
+            background-color: #000000;
+            padding: 20px;
+            font-size: 72px; /* Increase this value to make the title bigger */
+            text-shadow: 2px 2px 5px #000;
+        }
+
+        .main-content {
+            flex-grow: 1;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border: 3px solid #ff00ff;
+            box-shadow: 0px 0px 10px #ff00ff;
+            transition: transform 0.5s;
+        }
+        .gallery img:hover {
+            transform: scale(2);
+        }
+        
+        .fun-gifs {
+            margin-top: 20px;
+        }
+
+        .fun-gifs img {
+            width: 100px;
+            height: auto;
+            margin: 5px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            margin-bottom: 5px; /* Reduces space below */
+        }
+
+        .clay-title {
+            font-size: 36px;
+            font-family: 'Metal Mania', cursive;
+            color: #a24cf3; /* Purple color */
+            text-shadow: 2px 2px 5px #000;
+            margin: 0;
+        }
+
+        .gif-container {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .cute-gif {
+            width: 50px; /* Small size for gifs */
+            height: auto;
+        }
+
+    .blurb {
+        font-size: 18px;
+        color: white;
+        max-width: 600px;
+        margin: 5px auto;
+    }
+
+    footer {
+        width: 100%;
+        background: linear-gradient(to top, #600080, #9900cc);
+        text-align: center;
+        padding: 10px;
+        margin-top: 20px;
+        border-top: 2px solid #000000;
+    }
+
+    footer p {
+        margin: 0;
+        font-size: 16px;
+        color: white;
+    }
+
+    .socials {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .socials img {
+        width: 40px; /* Adjust size */
+        height: 40px;
+        transition: transform 0.3s;
+        object-fit: contain; /* Ensures the aspect ratio is maintained without cropping */
+    }
+
+    .socials img:hover {
+        transform: scale(1.2);
+    }        
+    </style>
+</head>
+
+<body>
+    <div class="checkered-border"></div>
+    
+    <div class="container">
+        <div class="banner">SpoonBloom</div>
+        
+        <div class="navbar">
+            <a href="shirts.html" class="nav-link active">Shirts</a>
+            <a href="drawings.html" class="nav-link">Drawings</a>
+            <a href="clay.html" class="nav-link">Clay</a>
+            <a href="about.html" class="nav-link">About</a>
+        </div>
+        
+        
+    <div class="main-content" id="shirts">
+        <div class="section-header">
+            <div class="gif-container">
+                <img src="https://i.pinimg.com/originals/05/bf/b1/05bfb13dbad7c8f3815c723d4c0c34be.gif" alt="Left Cute GIF" class="cute-gif">
+                <h2 class="clay-title">Gallery</h2>
+                <img src="https://i.pinimg.com/originals/05/bf/b1/05bfb13dbad7c8f3815c723d4c0c34be.gif" alt="Right Cute GIF" class="cute-gif">
+            </div>
+        </div>
+        <p class="blurb">Check out some of my clay art! These pieces are made with lots of love and creativity. Enjoy!</p>       
+        <div class="gallery">
+            <img src="shirts/hands down.png">
+            <img src="shirts/sayanything3.png">
+            <img src="shirts/silverstein.png">
+            <img src="shirts/xenoheel.png">
+            <img src="shirts/heel peso.png">
+            <img src="shirts/taking back sunda.png">
+            <img src="shirts/sensesfail.png">
+            <img src="shirts/placebo.png">
+        </div>
+    </div>
+        
+    <!-- New Section Divider -->
+    <div class="section-header">
+        <div class="gif-container">
+            <img src="https://i.pinimg.com/originals/05/bf/b1/05bfb13dbad7c8f3815c723d4c0c34be.gif" alt="Left Cute GIF" class="cute-gif">
+        </div>
+        <h2 class="clay-title">Collages</h2>
+        <div class="gif-container">
+            <img src="https://i.pinimg.com/originals/05/bf/b1/05bfb13dbad7c8f3815c723d4c0c34be.gif" alt="Right Cute GIF" class="cute-gif">
+        </div>
+    </div>
+    <p class="blurb">Here</p>
+
+    <!-- Second Gallery -->
+    <div class="gallery">
+        <img src="drawings/alberto - Copy.png" alt="Clay Art 4">
+    </div>
+            
+    <div class="fun-gifs">
+        <img src="https://dl.glitter-graphics.com/pub/3646/3646048yiipl9y9w5.gif" alt="Sparkle">
+        <img src="https://i.pinimg.com/originals/7a/98/41/7a98413dbf3b22a08914cb78f4064a36.gif" alt="Flame">
+        <img src="https://i.pinimg.com/originals/0d/ee/0e/0dee0ecd7d419681cddcc05cb1a04c37.gif" alt="Star">
+    </div>
+
+    <footer>
+       <!-- <p>© 2025 SpoonBloom | Follow me:</p> -->
+        <div class="socials">
+            <a href="https://instagram.com/heresyourspoons" target="_blank">
+                <img src="https://img.icons8.com/?size=100&id=32309&format=png&color=FFFFFF" width=40px height=40px>
+            </a>
+            <a href="https://tiktok.com/@spoonbloom" target="_blank">
+                <img src="https://img.icons8.com/?size=100&id=K6KK5ISTAWwE&format=png&color=FFFFFF" width=50px height=50px>
+            </a>
+            <a href="mailto:spoonbloom.contact@gmail.com" target="_blank">
+                <img src="https://img.icons8.com/?size=100&id=Y2GfpkgYNp42&format=png&color=FFFFFF" width=50px height=50px>
+            </a>
+            <a href="depop.com/depopiel" target="_blank">
+                <img src="https://img.icons8.com/?size=100&id=1Afq3S5Cbcck&format=png&color=FFFFFF" width=50px height=50px>
+            </a>
+        </div>
+    </footer>
+    
+ </div>
+    
+<div class="checkered-border"></div>
+    
+<audio autoplay loop>
+    <source src="midi_song.mp3" type="audio/mpeg">
+</audio>
+
+</body>
+
+
+</html>
