@@ -1,0 +1,248 @@
+/* styles/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
+@font-face {
+  font-family: 'Pixel Digivolve';
+  src: url("/fonts/Pixel-Digivolve.otf") format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --purple-gradient: linear-gradient(to top, #600080, #9900cc);
+  --neon-pink: #ff00ff;
+  --light-purple: #a24cf3;
+  --dark-purple: #600080;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Pixel Digivolve';
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.banner {
+  width: 100%;
+  font-family: 'Metal Mania';
+  color: white;
+  background-color: #000000;
+  padding: 20px;
+  font-size: 72px;
+  text-shadow: 2px 2px 5px #000;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.banner:hover {
+  font-size: 80px;
+}
+
+.blurb {
+  font-size: 18px;
+  color: white;
+  max-width: 600px;
+  margin: 5px auto;
+}
+
+.checkered-border {
+  width: 75px;
+  min-height: 100vh;
+  background-image: url('https://t3.ftcdn.net/jpg/00/97/81/02/360_F_97810286_SYAktfuCvCY7uFYxqFI0BVIVflKzqNT9.jpg');
+  background-repeat: repeat;
+  background-size: 300px 300px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.checkered-border.left {
+  left: 0;
+}
+
+.checkered-border.right {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 75px;
+  min-height: 100vh;
+  background-image: url('https://t3.ftcdn.net/jpg/00/97/81/02/360_F_97810286_SYAktfuCvCY7uFYxqFI0BVIVflKzqNT9.jpg');
+  background-repeat: repeat;
+  background-size: 300px 300px;   
+}
+
+
+.clay-title {
+  font-size: 36px;
+  font-family: 'Metal Mania', cursive;
+  color: var(--light-purple);
+  text-shadow: 2px 2px 5px #000;
+  margin: 0;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: calc(100vw - 450px); /* Accounts for both borders */
+  background-color: #000;
+  padding: 20px;
+  margin: 0 auto;
+  flex-grow: 1;
+}
+
+.cute-gif {
+  width: 50px;
+  height: auto;
+}
+
+footer {
+  width: 100vw;
+  background: var(--purple-gradient);
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+  border-top: 2px solid var(--neon-pink);
+}
+
+.fun-gifs {
+  margin-top: 20px;
+}
+
+.fun-gifs img {
+  width: 100px;
+  height: auto;
+  margin: 5px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 15px;
+  max-width: 2200px;
+  margin: auto;
+  justify-items: center;
+}
+
+.gallery:has(> :only-child) {
+  grid-template-columns: 1fr;
+  max-width: 3000px; /* Match your image width */
+  margin: 0 auto;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 200px; 
+  height: auto;
+  border: 3px solid var(--neon-pink);
+  box-shadow: 0px 0px 10px var(--neon-pink);
+  transition: transform 0.5s;
+}
+
+.gallery img:hover {
+  transform: scale(2.5);
+}
+
+
+.gif-container {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.main-content {
+  flex-grow: 1;
+  width: calc(100% - 20px); /* Accounts for additional spacing */
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.single-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.socials {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px; /* Reduced gap to fit everything */
+  flex-wrap: wrap; /* Allows wrapping on small screens */
+  }
+
+.socials img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+  object-fit: contain;
+}
+
+.socials img:hover {
+  transform: scale(1.2);
+}
+
+.socials img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+    object-fit: contain;
+  }
+
+  
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-link.active {
+  color: #000000;
+}
+
+.navbar {
+  width: 100vw;
+  background: var(--purple-gradient);
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  border: 0.5px solid #7b7b7b;
+}
+
+.navbar a {
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.page-wrapper {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    width: 100vw; 
+  }
+  

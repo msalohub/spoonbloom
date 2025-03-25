@@ -1,0 +1,17 @@
+# Next.js build caches
+.next/
+out/  # ← Already auto-generated during deployment
+
+# Server-side files (not needed for static export)
+server/
+api/
+*.env
+*.env.local
+
+# Development files
+node_modules/
+*.log
+
+# System files
+.DS_Store
+.thumbs
