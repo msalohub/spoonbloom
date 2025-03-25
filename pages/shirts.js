@@ -77,7 +77,7 @@ export default function Shop() {
           
           <div className="single-image-container">
             <Image
-              src="/images/ComingSoon.png"
+              src="/images/ComingSoon.webp"
               alt="WIP"
               width={1366}
               height={1026}
@@ -108,7 +108,7 @@ export default function Shop() {
           <Link href="https://ko-fi.com/spoonbloom" passHref legacyBehavior>
             <a target="_blank" rel="noopener noreferrer">
               <Image
-                src="/images/KoFi.png"
+                src="/images/KoFi.webp"
                 alt="Support me on Ko-Fi"
                 width={1366}
                 height={768}
@@ -121,7 +121,7 @@ export default function Shop() {
             </a>
           </Link>
       </div>
-      
+
         <div className="fun-gifs">
           {funGifs.map((gif, index) => (
             <Image
