@@ -8,7 +8,9 @@ export default function Shop() {
 
   // Gallery images data
   const galleryImages = [
-    //{ src: '/images/ComingSoon.png', alt: 'WIP' },
+    { src: '/clay/bluelody.png', alt: 'WIP' },
+    { src: '/clay/bluelody2.png', alt: 'WIP' },
+    { src: '/clay/bluelody3.png', alt: 'WIP' }
   ];
 
   const funGifs = [

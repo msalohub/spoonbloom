@@ -10,19 +10,26 @@ export default function Shop() {
   const galleryImages = [
     { src: '/drawings/valentine copy.jpg', alt: 'Valentine Art' },
     { src: '/drawings/Song of Heeling - Mariel Salomon - Creative Commons.png', alt: 'Song of Heeling' },
+    { src: '/drawings/laurmau.png', alt: 'Laurmau' },
     { src: '/drawings/aph.jpg', alt: 'APH Art' },
-    { src: '/drawings/aph plain.jpg', alt: 'APH Plain' },
+    { src: '/drawings/gid33.png', alt: 'Total Drama Ring Dunk Invite' },
+    { src: '/drawings/tayyla 21.png', alt: 'Tayla' },
+    { src: '/drawings/blue.gif', alt: 'Weezer Gif' },
+    { src: '/drawings/chibimau alt coloring.png', alt: 'Chibi Laurmau' },
     { src: '/drawings/weezer family.png', alt: 'Weezer Family' },
+    { src: '/drawings/red.gif', alt: 'Weezer Red GIF' },
     { src: '/drawings/lis.png', alt: 'LIS Art' },
+    { src: '/drawings/FC16.png', alt: 'FC' },
     { src: '/drawings/berit.png', alt: 'Berit' },
+    { src: '/drawings/laurlaur.png', alt: 'Laurance Zvahl' },
     { src: '/drawings/fellas.png', alt: 'The Fellas' },
     { src: '/drawings/RiftsCommision.jpg', alt: 'Rifts Commission' },
-    { src: '/drawings/weezy9.jpg', alt: 'Weezy' },
-    { src: '/drawings/bigger weezer red.png', alt: 'Weezer Red' },
     { src: '/drawings/slurp.png', alt: 'Slurp' },
+    { src: '/drawings/cassies.png', alt: 'Cassie Euphoria and Cassie Skins' },
     { src: '/drawings/print among us christmas.png', alt: 'Among Us Christmas' },
     { src: '/drawings/true koryception.png', alt: 'Koryception' },
-    { src: '/drawings/termagant.png', alt: 'Termagant' }
+    { src: '/drawings/termagant.png', alt: 'Termagant' },
+    { src: '/drawings/tdi smaller.gif', alt: 'Total Drama Gif' }
   ];
 
   const collageImages = [
