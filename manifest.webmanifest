@@ -1,9 +1,0 @@
-{
-    "name": "spoonbloom",
-    "short_name": "spoonbloom",
-    "start_url": "/",
-    "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#000000"
-  }
-  
