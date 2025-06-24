@@ -3,14 +3,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-export default function Shop() {
+export default function Drawings() {
   const router = useRouter();
 
   // Gallery images data
   const galleryImages = [
     { src: '/drawings/valentine copy.jpg', alt: 'Valentine Art' },
     { src: '/drawings/Song of Heeling - Mariel Salomon - Creative Commons.png', alt: 'Song of Heeling' },
-    { src: '/drawings/laurmau.png', alt: 'Laurmau' },
+    { src: '/drawings/laurmau.png', alt: 'APH Art' },
     { src: '/drawings/aph.jpg', alt: 'APH Art' },
     { src: '/drawings/gid33.png', alt: 'Total Drama Ring Dunk Invite' },
     { src: '/drawings/tayyla 21.png', alt: 'Tayla' },
