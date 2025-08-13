@@ -3,12 +3,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-export default function Shop() {
+export default function Clay() {
   const router = useRouter();
 
   // Gallery images data
   const galleryImages = [
-    //{ src: '/images/ComingSoon.png', alt: 'WIP' },
+    { src: '/clay/bluelody.png', alt: 'WIP' },
+    { src: '/clay/bluelody2.png', alt: 'WIP' },
+    { src: '/clay/bluelody3.png', alt: 'WIP' }
   ];
 
   const funGifs = [
