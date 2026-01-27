@@ -1,0 +1,58 @@
+.nav {
+  width: 100%;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  gap: 8rem; /* gap between links*/
+  padding: 1.0rem; /*taller bar*/
+  font-family: 'Lullabiest', sans-serif;
+}
+
+.link {
+  text-decoration: none;
+  color: #7FD317;
+  font-size: clamp(1.4rem, 2.7vw, 2.0rem);
+  transition: transform 0.3s ease;
+}
+
+.link:hover {
+  transform: scale(1.25);
+}
+
+.active {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .nav {
+    gap: 4rem; /* Reduced gap on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    gap: 2rem;
+    padding: 0.8rem 0;
+  }
+  
+  .link {
+    font-size: clamp(1rem, 3vw, 1.4rem);
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .link {
+    font-size: 1.1rem;
+  }
+}
+
+

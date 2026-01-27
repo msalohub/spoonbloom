@@ -1,12 +1,49 @@
 /* styles/globals.css */
-@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
+.title {
+  font-family: 'Lullabiest', cursive;
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  color: #7FD317;
+  text-shadow:
+    -10px -10px 0 #000,
+     0   -10px 0 #000,
+     10px -10px 0 #000,
+     10px  0   0 #000,
+     10px  10px 0 #000,
+     0    10px 0 #000,
+    -10px  10px 0 #000,
+    -10px  0   0 #000;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.page {
+  background: #31094D;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
 
 @font-face {
-  font-family: 'Pixel Digivolve';
-  src: url("/fonts/Pixel-Digivolve.otf") format('opentype');
+  font-family: 'Lullabiest';
+  src: url('/fonts/Lullabiest.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'TinyChalk';
+  src: url('/fonts/TinyChalk-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Minecraft';
+  src: url('/fonts/MinecraftRegular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 :root {
   --purple-gradient: linear-gradient(to top, #600080, #9900cc);
@@ -16,27 +53,12 @@
 }
 
 body {
-  background-color: #000;
+  background-color: #31094D;
   color: #fff;
-  font-family: 'Pixel Digivolve';
-  text-align: center;
+  font-family: 'Lullabiest', sans-serif;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
   overflow-x: hidden;
-}
-
-.banner {
-  width: 100%;
-  font-family: 'Metal Mania';
-  color: white;
-  background-color: #000000;
-  padding: 20px;
-  font-size: 72px;
-  text-shadow: 2px 2px 5px #000;
-  text-decoration: none;
-  transition: all 0.3s ease-in-out;
 }
 
 .banner:hover {
@@ -50,36 +72,9 @@ body {
   margin: 5px auto;
 }
 
-.checkered-border {
-  width: 75px;
-  min-height: 100vh;
-  background-image: url('https://t3.ftcdn.net/jpg/00/97/81/02/360_F_97810286_SYAktfuCvCY7uFYxqFI0BVIVflKzqNT9.jpg');
-  background-repeat: repeat;
-  background-size: 300px 300px;
-  position: fixed;
-  top: 0;
-  z-index: 10;
-}
-
-.checkered-border.left {
-  left: 0;
-}
-
-.checkered-border.right {
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 75px;
-  min-height: 100vh;
-  background-image: url('https://t3.ftcdn.net/jpg/00/97/81/02/360_F_97810286_SYAktfuCvCY7uFYxqFI0BVIVflKzqNT9.jpg');
-  background-repeat: repeat;
-  background-size: 300px 300px;   
-}
-
-
 .clay-title {
   font-size: 36px;
-  font-family: 'Metal Mania', cursive;
+  font-family: 'Lullabiest', cursive;
   color: var(--light-purple);
   text-shadow: 2px 2px 5px #000;
   margin: 0;
@@ -91,7 +86,7 @@ body {
   flex-direction: column;
   align-items: center;
   max-width: calc(100vw - 450px); /* Accounts for both borders */
-  background-color: #000;
+  background-color: #31094D;
   padding: 20px;
   margin: 0 auto;
   flex-grow: 1;
@@ -124,7 +119,7 @@ footer {
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 15px;
+  gap: 65px;
   padding: 15px;
   max-width: 2200px;
   margin: auto;
@@ -150,18 +145,10 @@ footer {
   transform: scale(2.5);
 }
 
-
 .gif-container {
   display: flex;
   gap: 30px;
   align-items: center;
-}
-
-.main-content {
-  flex-grow: 1;
-  width: calc(100% - 20px); /* Accounts for additional spacing */
-  padding: 20px;
-  margin: 0 auto;
 }
 
 .section-header {
@@ -207,42 +194,3 @@ footer {
     transition: transform 0.3s;
     object-fit: contain;
   }
-
-  
-.nav-link {
-  color: white;
-  text-decoration: none;
-}
-
-.nav-link.active {
-  color: #000000;
-}
-
-.navbar {
-  width: 100vw;
-  background: var(--purple-gradient);
-  padding: 20px 0;
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  border: 0.5px solid #7b7b7b;
-}
-
-.navbar a {
-  color: rgb(255, 255, 255);
-  font-size: 25px;
-  text-decoration: none;
-}
-
-.navbar a:hover {
-  text-decoration: underline;
-}
-
-.page-wrapper {
-    display: flex;
-    width: 100%;
-    min-height: 100vh;
-    position: relative;
-    width: 100vw; 
-  }
-  

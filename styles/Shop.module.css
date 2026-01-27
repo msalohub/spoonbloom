@@ -1,0 +1,162 @@
+.title {
+  font-family: 'Lullabiest', cursive;
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  color: #7FD317;
+  text-shadow:
+    -10px -10px 0 #000,
+     0   -10px 0 #000,
+     10px -10px 0 #000,
+     10px  0   0 #000,
+     10px  10px 0 #000,
+     0    10px 0 #000,
+    -10px  10px 0 #000,
+    -10px  0   0 #000;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.page {
+  background: #31094D;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* Top platform buttons */
+.platformRow {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.platformBtn {
+  transition: transform 0.2s ease;
+}
+
+.platformBtn:hover {
+  transform: scale(1.25);
+}
+
+/* Product grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 60px;
+  max-width: 1600px;
+  margin: 15px auto;
+  justify-items: center;
+}
+
+.card {
+  background: #31094D;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* Carousel */
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.productImg {
+  max-width: 320px;
+  max-height: 320px;
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+  border: 8px solid #000;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+.productImg:hover {
+  transform: scale(1.25);
+}
+
+.arrow {
+  background: none;
+  border: none;
+  color: #7FD317;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.productImg:hover {
+  transform: scale(1.25);
+}
+
+.productName {
+  font-family: 'Lullabiest', sans-serif;
+  color: #AE85FF;
+  font-size: 1.25rem;
+  text-align: center;
+  margin: 18px 25px 0px;
+}
+
+/* Buy button */
+.buyBtn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 5px 50px;
+  border: 5px solid #000;
+  background: #9F3CE6;
+  color: #000;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-family: 'Lullabiest', sans-serif;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.buyBtn:hover {
+  transform: scale(1.05);
+   box-shadow: 0 0 10px #9F3CE6;
+}
+
+.buyBtnWhite {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 5px 50px;
+  border: 5px solid #000;
+  background: #ffffff;
+  color: #000;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-family: 'Lullabiest', sans-serif;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.buyBtnBlack {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 5px 50px;
+  border: 5px solid #000;
+  background: #000000;
+  color: #9F3CE6;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-family: 'Lullabiest', sans-serif;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .productImg {
+    width: 220px;
+    height: 220px;
+  }
+
+  .platformBtn img {
+    width: 120px;
+  }
+}

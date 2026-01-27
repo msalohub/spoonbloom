@@ -1,0 +1,184 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3vw 5vw 5vw 5vw;
+  color: white;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: #31094D;
+  min-height: 100vh;
+}
+
+.title { /* gallery title style */
+  font-family: 'Lullabiest', cursive;
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  color: #7FD317;
+  text-shadow:
+    -8px -8px 0 #000,
+     0   -8px 0 #000,
+     8px -8px 0 #000,
+     8px  0   0 #000,
+     8px  8px 0 #000,
+     0    8px 0 #000,
+    -8px  8px 0 #000,
+    -8px  0   0 #000;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.section {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+/* Toggle button style for labels */
+.label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #9F3CE6;
+  color: black;
+  font-weight: bold;
+  padding: 8px 8px;
+  border-radius: 22px;
+  margin-bottom: 15px;
+ font-size: clamp(1.5rem, 3vw, 1.8rem); 
+  border: 3px solid black;
+  box-shadow: 0 0 0 3px black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Lullabiest', sans-serif;
+  width: 100%;
+  text-align: left;
+}
+
+.label:hover {
+  background-color: #9F3CE6;
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 3px black, 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.label:active {
+  transform: translateY(0);
+}
+
+.toggleIcon {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 30px;
+  width: 100%;
+  animation: fadeIn 0.3s ease;
+  animation: fadeOut 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.imageWrapper {
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  /* No fixed aspect ratio - images keep original shape */
+  max-height: 300px; /* Maximum height to prevent huge images */
+  min-height: 100px;
+}
+
+.imageWrapper:hover {
+  transform: scale(1.35);
+  border-color: white;
+  filter: drop-shadow(0 0 15px rgba(127, 211, 23, 0.8))
+          drop-shadow(0 0 25px rgba(127, 211, 23, 0.4));
+}
+
+.image {
+  width: 100%;
+  height: auto; /* Auto height to maintain aspect ratio */
+  display: block;
+  border-radius: 10px;
+  border: 2px solid #7FD317;
+  background: #31094D; /* Dark background for transparency */
+}
+
+/* Adjust grid columns for different layouts */
+.imageGrid.masonry {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: 10px; /* Masonry-like layout */
+}
+
+.imageWrapper.masonry {
+  grid-row-end: span 20; /* Adjust based on image height */
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .title {
+    font-size: 48px;
+  }
+
+  .label {
+    font-size: 16px;
+    padding: 10px 16px;
+    border-width: 2px;
+  }
+  
+  .toggleIcon {
+    font-size: 20px;
+  }
+
+  .imageGrid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+  }
+  
+  .imageWrapper:hover {
+    transform: scale(1.03);
+  }
+}
+
+@media (max-width: 480px) {
+  .imageGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .container {
+    padding: 15px;
+  }
+  
+  .image {
+    border-width: 1px;
+  }
+}
+
+/* Optional: Add a "Toggle All" button at the top */
+.toggleAll {
+  background-color: #333;
+  color: #7FD317;
+  border: 2px solid #7FD317;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-family: 'Lullabiest', sans-serif;
+  font-weight: bold;
+}
+
+.toggleAll:hover {
+  background-color: #444;
+}
