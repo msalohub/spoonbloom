@@ -1,0 +1,159 @@
+.page {
+  min-height: 100vh;
+  background-color: #31094D;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Same style as gallery title */
+.title {
+  font-family: 'Lullabiest', cursive;
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  color: #7FD317;
+  text-shadow:
+    -10px -10px 0 #000,
+     0   -10px 0 #000,
+     10px -10px 0 #000,
+     10px  0   0 #000,
+     10px  10px 0 #000,
+     0    10px 0 #000,
+    -10px  10px 0 #000,
+    -10px  0   0 #000;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.phone {
+  font-family: 'TinyChalk', sans-serif;
+  font-size: 1.5rm;
+  letter-spacing: 1px;
+}
+
+.purple:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.card {
+  background: #000;
+  border-radius: 30px;
+  padding: 30px 45px 30px 45px;
+  max-width: 1400px;
+  width: 65%;
+  text-align: left;
+}
+
+.heading {
+  font-family: 'Lullabiest', cursive;
+  color: #9F3CE6;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.green {
+  color: #7FD317;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.purple {
+  color: #9F3CE6;
+  text-decoration: none;
+  display: block;
+  margin-top: 4px;
+}
+
+.infoBlock {
+  margin: 15px 0;
+}
+
+.supportButton {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 9px 25px;
+  background: #9F3CE6;
+  color: #000;
+  border-radius: 999px;
+  font-family: 'Lullabiest', sans-serif;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.supportButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #9F3CE6;
+}
+
+.flipCard {
+  perspective: 1200px;
+  width: 100%;
+  max-width: 1400px;
+  cursor: pointer;
+}
+
+.flipInner {
+  position: relative;
+  width: 100%;
+  transition: transform 0.8s cubic-bezier(.4,.2,.2,1);
+  transform-style: preserve-3d;
+}
+
+.flipped .flipInner {
+  transform: rotateY(180deg);
+}
+
+.cardFront,
+.cardBack {
+  background: #000;
+  border-radius: 30px;
+  padding: 30px;
+  backface-visibility: hidden;
+  min-height: 500px;
+}
+
+.cardBack {
+  position: absolute;
+  inset: 0;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.businessCard {
+  width: 420px;
+  border-radius: 14px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.businessCard:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 40px #9F3CE6;
+}
+
+
+/* Mobile tuning */
+@media (max-width: 600px) {
+  .card {
+    padding: 20px 18px;
+  }
+
+  .heading {
+    font-size: 1.6rem;
+  }
+
+  .supportButton {
+    font-size: 0.95rem;
+  }
+
+  .cardImage {
+    width: 140px;
+  }
+}
+
+
+
+

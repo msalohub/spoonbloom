@@ -18,10 +18,12 @@ export default function Shop() {
   ];
 
   const socialLinks = [
-    { href: 'https://instagram.com/shopspoonbloom', icon: 'https://img.icons8.com/?size=100&id=32309&format=png&color=FFFFFF', alt: 'Instagram', width: 40, height: 40 },
+    { href: 'https://etsy.com/shop/shopspoonbloom', icon: 'https://img.icons8.com/?size=100&id=VTJpUu3wkgIl&format=png&color=FFFFFF', alt: 'Etsy', width: 35, height: 35 },
+    { href: 'https://instagram.com/shopspoonbloom', icon: 'https://img.icons8.com/?size=100&id=32309&format=png&color=FFFFFF', alt: 'Instagram', width: 35, height: 35 },
+    { href: 'https://ko-fi.com/spoonbloom', icon: 'https://img.icons8.com/?size=100&id=3zOBKGrfuTCN&format=png&color=FFFFFF', alt: 'Ko-Fi', width: 50, height: 50 },
     { href: 'https://tiktok.com/@spoonbloom', icon: 'https://img.icons8.com/?size=100&id=K6KK5ISTAWwE&format=png&color=FFFFFF', alt: 'TikTok', width: 50, height: 50 },
     { href: 'mailto:spoonbloom.contact@gmail.com', icon: 'https://img.icons8.com/?size=100&id=Y2GfpkgYNp42&format=png&color=FFFFFF', alt: 'Email', width: 50, height: 50 },
-    { href: 'https://depop.com/depopiel', icon: 'https://img.icons8.com/?size=100&id=1Afq3S5Cbcck&format=png&color=FFFFFF', alt: 'Depop', width: 50, height: 50 }
+    { href: 'https://depop.com/shopspoonbloom', icon: 'https://img.icons8.com/?size=100&id=1Afq3S5Cbcck&format=png&color=FFFFFF', alt: 'Depop', width: 50, height: 50 }
   ];
 
   return (
@@ -31,23 +33,6 @@ export default function Shop() {
         <meta name="description" content="spoonbloom home pagey" />
         </Head>
 
-        <div className="page-wrapper">
-            <div className="checkered-border left"></div>
-    
-        <div className="container">
-            <Link href="/" className="banner">
-            SpoonBloom
-            </Link>
-
-        {/*Nav Bar*/}
-        <div className="navbar">
-            <Link href="/about" className={`nav-link ${router.pathname === '/about' ? 'active' : ''}`}>About</Link>
-            <Link href="/shop" className={`nav-link ${router.pathname === '/shop' ? 'active' : ''}`}>Shop</Link>
-            <Link href="/shirts" className={`nav-link ${router.pathname === '/shirts' ? 'active' : ''}`}>Shirts</Link>
-            <Link href="/drawings" className={`nav-link ${router.pathname === '/drawings' ? 'active' : ''}`}>Drawings </Link>
-            <Link href="/clay" className={`nav-link ${router.pathname === '/clay' ? 'active' : ''}`}>Clay</Link>
-        </div>
-        
         {/*section one gallery */}
  
         <div className="main-content" id="index">
@@ -61,7 +46,7 @@ export default function Shop() {
                 height={50}
               />
             </div>
-            <h2 className="clay-title">Home</h2>
+            <h1 className="title">Home</h1>
             <div className="gif-container">
               <Image 
                 src="https://i.pinimg.com/originals/05/bf/b1/05bfb13dbad7c8f3815c723d4c0c34be.gif" 
@@ -86,25 +71,7 @@ export default function Shop() {
                 height: 'auto' 
               }}
             />
-        </div>
-
-        <div className="single-image-container">
-          <Link href="https://ko-fi.com/spoonbloom" passHref legacyBehavior>
-            <a target="_blank" rel="noopener noreferrer">
-              <Image
-                src="/images/KoFi.webp"
-                alt="Support me on Ko-Fi"
-                width={1366}
-                height={768}
-                style={{ 
-                  width: '45%', 
-                  height: 'auto',
-                  cursor: 'pointer' // Optional: Shows clickable hand icon
-                }}
-              />
-            </a>
-          </Link>
-      </div>
+          </div>
 
           <div className="gallery">
             {galleryImages.map((image, index) => (
@@ -122,8 +89,7 @@ export default function Shop() {
           </div>
         </div>
       
-        
-        <div className="fun-gifs">
+      {/* <div className="fun-gifs">
           {funGifs.map((gif, index) => (
             <Image
               key={index}
@@ -133,8 +99,9 @@ export default function Shop() {
               height={100}
             />
           ))}
-        </div>
-        
+        </div>*/}
+
+{/*
         <footer>
           <div className="socials">
             {socialLinks.map((social, index) => (
@@ -149,11 +116,7 @@ export default function Shop() {
             ))}
           </div>
         </footer>
-      </div>
-      
-      
-      <div className="checkered-border right"></div>
-        </div>
-    </>
+*/}  
+       </>
   );
 }

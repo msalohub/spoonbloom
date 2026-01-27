@@ -1,159 +1,64 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import styles from '../styles/Shop.module.css'
+import Carousel from '../components/Carousel'
+import Image from 'next/image'
+
+import { useState } from 'react'
+
+const platforms = [
+  { name: 'Etsy', img: '/images/ShopOnEtsy.png', link: 'https://etsy.com/shop/shopspoonbloom' },
+  { name: 'Ko-fi', img: '/images/ShopOnKofi.png', link: 'https://ko-fi.com/spoonbloom' },
+  { name: 'Depop', img: '/images/ShopOnDepop.png', link: 'https://depop.com/shopspoonbloom' },
+]
+
+const products = [
+  { name: 'Minecraft Diaries Character Fancards',
+    images: ['/products/Cards1.png', '/products/Cards2.png', '/products/Cards3.png',
+      '/products/Cards4.png', '/products/Cards5.png', '/products/Cards6.png', '/products/Cards7.png', '/products/Cards8.png', '/products/Cards9.png'],
+    link: 'https://www.etsy.com/listing/4443416587/pre-order-aphmau-minecraft-diaries?etsrc=sdt&utm_medium=SellerListingTools&utm_campaign=Share&utm_source=Pinterest&share_time=1769285120000&utm_term=so.slt&epik=dj0yJnU9Rl9yYlZJTWQtN3NmeThVaThCTzJDZTZfSC1maldVdUcmcD0wJm49QmNlc0EyazlKeTBWcnRzWEliYzhUZyZ0PUFBQUFBR2wxSmp3m' },
+      
+  { name: 'Minecraft Diaries Hairclips',
+    images: ['/products/Clips1.png', '/products/Clips2.png', '/products/Clips3.png', '/products/Clips6.png'],
+    link: 'https://www.etsy.com/listing/4444738979/garroth-laurance-minecraft-diaries?click_key=00bdf9d30ace94318226242542ae33c13eb32c6c%3A4444738979&click_sum=7dad71f1&sr_prefetch=1&pf_from=shop_home&ref=shop_home_active_3&pro=1' },
+  
+  { name: 'Minecraft Diaries Keychains',
+    images: ['/products/Keychain1.png', '/products/Keychain2.png', '/products/Keychain3.png', '/products/Keychain4.png', '/products/Keychain5.png', '/products/Keychain6.png', '/products/Keychain7.png', '/products/Keychain8.png'],
+    link: 'https://www.etsy.com/listing/4446272172/aphmau-garroth-laurance-minecraft?sr_prefetch=1&pf_from=shop_home&ref=shop_home_active_4&pro=1&logging_key=911605fd8b7ff1054fe4305c40095f9faa4cb701%3A4446272172' },
+    
+  { name: 'Minecraft Diaries Necklaces', 
+    images: ['/products/Necklace1.png', '/products/Necklace2.png', '/products/Necklace3.png', '/products/Necklace4.png', '/products/Necklace5.png',
+      '/products/Necklace6.png', '/products/Necklace7.png', '/products/Necklace8.png', '/products/Necklace9.png'],
+    link: 'https://www.etsy.com/listing/4446828409/garroth-laurance-minecraft-diaries?click_key=264154993310a764d04d1dc0875ccdb16015004c%3A4446828409&click_sum=06051df4&sr_prefetch=1&pf_from=shop_home&ref=shop_home_active_1&pro=1' } 
+]
 
 export default function Shop() {
-  const router = useRouter();
-
-  // Gallery images data
-  const galleryImages = [
-    //{ src: '/images/ComingSoon.png', alt: 'WIP' },
-  ];
-
-  const funGifs = [
-    { src: 'https://dl.glitter-graphics.com/pub/3646/3646048yiipl9y9w5.gif', alt: 'Sparkle' },
-    { src: 'https://i.pinimg.com/originals/7a/98/41/7a98413dbf3b22a08914cb78f4064a36.gif', alt: 'Flame' },
-    { src: 'https://i.pinimg.com/originals/0d/ee/0e/0dee0ecd7d419681cddcc05cb1a04c37.gif', alt: 'Star' }
-  ];
-
-  const socialLinks = [
-    { href: 'https://instagram.com/shopspoonbloom', icon: 'https://img.icons8.com/?size=100&id=32309&format=png&color=FFFFFF', alt: 'Instagram', width: 40, height: 40 },
-    { href: 'https://tiktok.com/@spoonbloom', icon: 'https://img.icons8.com/?size=100&id=K6KK5ISTAWwE&format=png&color=FFFFFF', alt: 'TikTok', width: 50, height: 50 },
-    { href: 'mailto:spoonbloom.contact@gmail.com', icon: 'https://img.icons8.com/?size=100&id=Y2GfpkgYNp42&format=png&color=FFFFFF', alt: 'Email', width: 50, height: 50 },
-    { href: 'https://depop.com/depopiel', icon: 'https://img.icons8.com/?size=100&id=1Afq3S5Cbcck&format=png&color=FFFFFF', alt: 'Depop', width: 50, height: 50 }
-  ];
-
-  return (
-    <>
-        <Head>
-        <title>shop | spoonbloom ᯓ★ </title>
-        <meta name="description" content="the spoonbloom store" />
-        </Head>
-
-        <div className="page-wrapper">
-            <div className="checkered-border left"></div>
-    
-        <div className="container">
-            <Link href="/" className="banner">
-            SpoonBloom
-            </Link>
-
-        {/*Nav Bar*/}
-        <div className="navbar">
-            <Link href="/about" className={`nav-link ${router.pathname === '/about' ? 'active' : ''}`}>About</Link>
-            <Link href="/shop" className={`nav-link ${router.pathname === '/shop' ? 'active' : ''}`}>Shop</Link>
-            <Link href="/shirts" className={`nav-link ${router.pathname === '/shirts' ? 'active' : ''}`}>Shirts</Link>
-            <Link href="/drawings" className={`nav-link ${router.pathname === '/drawings' ? 'active' : ''}`}>Drawings </Link>
-            <Link href="/clay" className={`nav-link ${router.pathname === '/clay' ? 'active' : ''}`}>Clay</Link>
-        </div>
-        
-        {/*section one gallery */}
- 
-        <div className="main-content" id="shop">
-          <div className="section-header">
-            <div className="gif-container">
-              <Image 
-                src="https://i.pinimg.com/originals/05/bf/b1/05bfb13dbad7c8f3815c723d4c0c34be.gif" 
-                alt="Left Cute GIF" 
-                className="cute-gif"
-                width={50}
-                height={50}
-              />
-            </div>
-            <h2 className="clay-title">Shop</h2>
-            <div className="gif-container">
-              <Image 
-                src="https://i.pinimg.com/originals/05/bf/b1/05bfb13dbad7c8f3815c723d4c0c34be.gif" 
-                alt="Right Cute GIF" 
-                className="cute-gif"
-                width={50}
-                height={50}
-              />
-            </div>
-          </div>
-          
-          <p className="blurb">Coming Soon...</p>
-          
-          <div className="single-image-container">
-            <Image
-              src="/images/ComingSoon.webp"
-              alt="WIP"
-              width={1366}
-              height={1026}
-              style={{ 
-                width: '70%', 
-                height: 'auto' 
-              }}
-            />
-        </div>
-
-          <div className="gallery">
-            {galleryImages.map((image, index) => (
-              <Image
-                key={index}
-                src={image.src}
-                alt={image.alt}
-                width={200}
-                height={200}
-                className="gallery-image"
-                quality = {100}
-                sizes="(max-width: 3300px) 100vw, 200px"
-              />
+   return (
+     <div className={styles.page}>
+     <h1 className={styles.title}>shop</h1>
+      
+      <div className={styles.platformRow}> 
+      {platforms.map(p => (
+         <a key={p.name} href={p.link} target="_blank"
+          className={styles.platformBtn}>
+            <Image src={p.img} alt={p.name} width={250}
+             height={156.25}/>
+             </a> 
             ))}
           </div>
-        </div>
+          
+      <div className={styles.grid}> 
+        {products.map((product, i) => (
+           <div key={i} className={styles.card}>
+  <Carousel images={product.images} /> 
 
-      
-        <div className="single-image-container">
-          <Link href="https://ko-fi.com/spoonbloom" passHref legacyBehavior>
-            <a target="_blank" rel="noopener noreferrer">
-              <Image
-                src="/images/KoFi.webp"
-                alt="Support me on Ko-Fi"
-                width={1366}
-                height={768}
-                style={{ 
-                  width: '45%', 
-                  height: 'auto',
-                  cursor: 'pointer' // Optional: Shows clickable hand icon
-                }}
-              />
-            </a>
-          </Link>
-      </div>      
-        
-        <div className="fun-gifs">
-          {funGifs.map((gif, index) => (
-            <Image
-              key={index}
-              src={gif.src}
-              alt={gif.alt}
-              width={100}
-              height={100}
-            />
-          ))}
-        </div>
-        
-        <footer>
-          <div className="socials">
-            {socialLinks.map((social, index) => (
-              <a key={index} href={social.href} target="_blank" rel="noopener noreferrer">
-                <Image
-                  src={social.icon}
-                  alt={social.alt}
-                  width={social.width}
-                  height={social.height}
-                />
-              </a>
-            ))}
-          </div>
-        </footer>
-      </div>
-      
-      
-      <div className="checkered-border right"></div>
-        </div>
-    </>
-  );
-}
+  <h2 className={styles.productName}>{product.name}</h2>
+
+  <a href={product.link} target="_blank" className={styles.buyBtn}> 
+    buy now!
+  </a> 
+</div>
+
+                 ))}
+                  </div>
+               </div>
+                )
+               }
